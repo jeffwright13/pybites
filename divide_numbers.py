@@ -10,6 +10,7 @@ Getting passed that exception (no early bail out, we're still in business) you t
 If denominator is 0 though, Python throws another exception. Figure out which one that is and catch it. In that case return 0.
 """
 
+
 def divide_numbers(numerator, denominator):
     """
     For this exercise you can assume numerator and denominator are of type
@@ -19,10 +20,5 @@ def divide_numbers(numerator, denominator):
     However if denominator is 0 catch the corresponding exception Python
     throws (cannot divide by 0), and return 0
     """
-
-#    try:
-#        n, d = int(numerator, denominator)
-#    except ValueError:
-#        raise(ValueError)
 
     return numerator / denominator
