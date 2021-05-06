@@ -33,4 +33,4 @@ def test_sort_by_surname_desc(name_list, expected):
 
 
 def test_shortest_first_name():
-    pass
+    assert bite005.shortest_first_name(bite005.NAMES) == "Al"
