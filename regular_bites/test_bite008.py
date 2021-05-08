@@ -11,9 +11,25 @@ def test_function(test_input, expected):
 """
 
 
-@pytest.mark.parametrize(
-    "s, n, expected",
-    [("3+5", 0, "3+5"), ("01010", 1, "10100"), ("Hello!", -3, "lo!Hel")],
-)
-def test_rotate_simple(s, n, expected):
-    assert bite008.rotate(s, n) == expected
+def test_rotate_zero():
+    assert bite008.rotate("Fred0", 0) == "Fred0"
+
+
+def test_rotate_n_positive_equal_or_greater():
+    assert bite008.rotate("Fred0", 5) == "Fred0"
+    assert bite008.rotate("Fred0", 6) == "Fred0"
+
+
+def test_rotate_n_positive_less_than():
+    assert bite008.rotate("Fred0", 4) == "0Fred"
+    assert bite008.rotate("Fred0", 3) == "d0Fre"
+
+
+def test_rotate_n_negative_equal_or_greater():
+    assert bite008.rotate("Fred0", -5) == "Fred0"
+    assert bite008.rotate("Fred0", -6) == "Fred0"
+
+
+def test_rotate_n_negative_less_than():
+    assert bite008.rotate("Fred0", -4) == "red0F"
+    assert bite008.rotate("Fred0", -3) == "ed0Fr"

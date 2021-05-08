@@ -11,7 +11,11 @@ Bite 8. Rotate string characters
 
 
 def rotate(s: str, n: int) -> str:
-    """Rotate characters in a string.
-    Expects string and n (int) for number of characters to move.
     """
-    pass
+    Rotate characters in a string.
+    Expects string s, and n (int) for number of characters to move.
+    """
+    if n == 0 or abs(n) >= len(s):
+        return s
+    else:
+        return "".join(list(s)[n:] + list(s)[0:n])
