@@ -18,7 +18,5 @@ countries = "Australia Spain Global Argentina USA Mexico".split()
 
 
 def enumerate_names_countries():
-    assert len(names) == len(countries)
-
     for i in range(len(names)):
         print("{}. {:<11}{}".format(i + 1, names[i], countries[i]))
