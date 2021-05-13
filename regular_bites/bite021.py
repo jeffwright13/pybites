@@ -13,18 +13,18 @@ See the docstrings and tests for more details. Have fun!
 Update 18th of Sept 2018: as concluded in the forum it is better to pass the cars dict into each function to make its scope local.
 """
 cars = {
-    'Ford': ['Falcon', 'Focus', 'Festiva', 'Fairlane'],
-    'Holden': ['Commodore', 'Captiva', 'Barina', 'Trailblazer'],
-    'Nissan': ['Maxima', 'Pulsar', '350Z', 'Navara'],
-    'Honda': ['Civic', 'Accord', 'Odyssey', 'Jazz'],
-    'Jeep': ['Grand Cherokee', 'Cherokee', 'Trailhawk', 'Trackhawk']
+    "Ford": ["Falcon", "Focus", "Festiva", "Fairlane"],
+    "Holden": ["Commodore", "Captiva", "Barina", "Trailblazer"],
+    "Nissan": ["Maxima", "Pulsar", "350Z", "Navara"],
+    "Honda": ["Civic", "Accord", "Odyssey", "Jazz"],
+    "Jeep": ["Grand Cherokee", "Cherokee", "Trailhawk", "Trackhawk"],
 }
 
 
 def get_all_jeeps(cars=cars):
     """return a comma  + space (', ') separated string of jeep models
        (original order)"""
-    pass
+    jeep_list = cars["Jeep"]
 
 
 def get_first_model_each_manufacturer(cars=cars):
@@ -32,7 +32,7 @@ def get_first_model_each_manufacturer(cars=cars):
     pass
 
 
-def get_all_matching_models(cars=cars, grep='trail'):
+def get_all_matching_models(cars=cars, grep="trail"):
     """return a list of all models containing the case insensitive
        'grep' string which defaults to 'trail' for this exercise,
        sort the resulting sequence alphabetically"""
