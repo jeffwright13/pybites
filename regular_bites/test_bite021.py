@@ -43,5 +43,5 @@ def test_sort_car_models():
         "Holden": ["Barina", "Captiva", "Commodore", "Trailblazer"],
         "Nissan": ["350Z", "Maxima", "Navara", "Pulsar"],
         "Honda": ["Accord", "Civic", "Jazz", "Odyssey"],
-        "Jeep": ["Cherokee", "Grand Cherokee", "Trailhawk", "Trackhawk"],
+        "Jeep": ["Cherokee", "Grand Cherokee", "Trackhawk", "Trailhawk"],
     }
