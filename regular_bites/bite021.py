@@ -29,7 +29,7 @@ def get_all_jeeps(cars=CARS):
 
 def get_first_model_each_manufacturer(cars=CARS):
     """return a list of matching models (original ordering)"""
-    pass
+    return [cars[key][0] for key in cars.keys()]
 
 
 def get_all_matching_models(cars=CARS, grep="trail"):
