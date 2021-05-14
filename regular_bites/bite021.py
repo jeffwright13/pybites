@@ -12,7 +12,7 @@ See the docstrings and tests for more details. Have fun!
 
 Update 18th of Sept 2018: as concluded in the forum it is better to pass the cars dict into each function to make its scope local.
 """
-cars = {
+CARS = {
     "Ford": ["Falcon", "Focus", "Festiva", "Fairlane"],
     "Holden": ["Commodore", "Captiva", "Barina", "Trailblazer"],
     "Nissan": ["Maxima", "Pulsar", "350Z", "Navara"],
@@ -21,25 +21,25 @@ cars = {
 }
 
 
-def get_all_jeeps(cars=cars):
+def get_all_jeeps(cars=CARS):
     """return a comma  + space (', ') separated string of jeep models
        (original order)"""
-    jeep_list = cars["Jeep"]
+    return ", ".join(cars["Jeep"])
 
 
-def get_first_model_each_manufacturer(cars=cars):
+def get_first_model_each_manufacturer(cars=CARS):
     """return a list of matching models (original ordering)"""
     pass
 
 
-def get_all_matching_models(cars=cars, grep="trail"):
+def get_all_matching_models(cars=CARS, grep="trail"):
     """return a list of all models containing the case insensitive
        'grep' string which defaults to 'trail' for this exercise,
        sort the resulting sequence alphabetically"""
     pass
 
 
-def sort_car_models(cars=cars):
+def sort_car_models(cars=CARS):
     """return a copy of the cars dict with the car models (values)
        sorted alphabetically"""
     pass

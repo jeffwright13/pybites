@@ -2,7 +2,7 @@ import pytest
 import bite021
 
 
-CARS = bite021.cars
+CARS = bite021.CARS
 
 
 def test_get_all_jeeps():
