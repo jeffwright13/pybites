@@ -24,16 +24,20 @@ def test_get_first_model_each_manufacturer():
 def test_get_all_matching_models():
     assert bite021.get_all_matching_models() == ["Trailblazer", "Trailhawk"]
     assert bite021.get_all_matching_models(grep="F") == [
-        "Falcon",
-        "Focus",
-        "Festiva",
         "Fairlane",
-    ]
-    assert bite021.get_all_matching_models(grep="z") == ["Trailblazer", "350Z", "Jazz"]
-    assert bite021.get_all_matching_models(grep="CO") == [
         "Falcon",
-        "Commodore",
+        "Festiva",
+        "Focus",
+    ]
+    assert bite021.get_all_matching_models(grep="z") == [
+        "350Z",
+        "Jazz",
+        "Trailblazer",
+    ]
+    assert bite021.get_all_matching_models(grep="CO") == [
         "Accord",
+        "Commodore",
+        "Falcon",
     ]
 
 
