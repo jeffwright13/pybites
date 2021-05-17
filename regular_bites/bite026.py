@@ -9,7 +9,10 @@ Bite 26. Dictionary comprehensions are awesome
 
     Check out the tests for more details. Have fun!
 
-    General template for dictionary comprehension in Python:
+    => Comprehensions in Python:
+    The comprehension consists of a single expression followed by at least one 'for' clause and zero or more 'for' or 'if' clauses.
+
+    => General template for dictionary comprehension in Python:
     dict_variable = {key:value for (key,value) in dictonary.items()}
 
 """
@@ -33,10 +36,18 @@ input_bites = {
 exclude_bites = {6, 10, 16, 18, 21}
 
 
-def filter_bites(bites=input_bites, bites_done=exclude_bites):
+def filter_bites_loop(bites=input_bites, bites_done=exclude_bites):
     """return the bites dict with the exclude_bites filtered out"""
     ret_dict = {}
     for item in bites.keys():
         if item not in bites_done:
             ret_dict[item] = bites[item]
     return ret_dict
+
+
+def filter_bites_comprehension(bites=input_bites, bites_done=exclude_bites):
+    """return the bites dict with the exclude_bites filtered out"""
+    return {key: value for (key, value) in bites.items() if key not in bites_done}
+
+
+filter_bites = filter_bites_loop
