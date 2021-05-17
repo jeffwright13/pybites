@@ -54,3 +54,11 @@ def test_input_bites():
         19: "Write a simple property",
         20: "Write a context manager",
     }
+
+
+def test_filter_bites():
+    result = bite026.filter_bites()
+    assert type(result) == dict
+    assert len(result) == 10
+    for bite in bite026.exclude_bites:
+        assert bite not in result, f"Bite {bite} should not be in result"
