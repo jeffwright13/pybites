@@ -16,7 +16,20 @@ Bite 29. Martin's IQ test
     ['A', 'f', '.', 'Q', 2]  # returns index 2 (dot is non-alphanumeric among alphanumerics)
     ['.', '{', ' ^', '%', 'a']  # returns index 4 ('a' is alphanumeric among non-alphanumerics)
 """
+alphanums = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
 
 def get_index_different_char(chars):
-    pass
+    num_alphas = 0
+    num_non_alphas = 0
+
+    for i in range(len(chars)):
+        if str(chars[i]) in alphanums:
+            num_alphas += 1
+        else:
+            num_non_alphas += 1
+
+        if (num_alphas >= 1 and str(chars[i]) not in alphanums) or (
+            num_non_alphas >= 1 and str(chars[i]) in alphanums
+        ):
+            return i
