@@ -23,13 +23,26 @@ def get_index_different_char(chars):
     num_alphas = 0
     num_non_alphas = 0
 
-    for i in range(len(chars)):
-        if str(chars[i]) in alphanums:
-            num_alphas += 1
-        else:
-            num_non_alphas += 1
+    if len(chars) <= 2:
+        raise ValueError(
+            f"Indeterminate input - sequence of length {len(chars)} too short."
+        )
 
-        if (num_alphas >= 1 and str(chars[i]) not in alphanums) or (
-            num_non_alphas >= 1 and str(chars[i]) in alphanums
-        ):
+    for i in range(len(chars)):
+        if str(chars[i]) == "":
+            num_non_alphas += 1
+        elif str(chars[i]) not in alphanums:
+            num_non_alphas += 1
+        else:
+            num_alphas += 1
+
+    if num_alphas > 1 and num_non_alphas > 1:
+        raise ValueError(
+            f"Indeterminate input - {num_alphas} alphas and {num_non_alphas} non-alphas."
+        )
+
+    for i in range(len(chars)):
+        if num_alphas > 1 and str(chars[i]) not in alphanums:
+            return i
+        elif num_non_alphas > 1 and str(chars[i]) != "" and str(chars[i]) in alphanums:
             return i
