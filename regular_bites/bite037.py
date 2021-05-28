@@ -32,7 +32,7 @@ def countdown_for(start=10):
 def countdown_recursive(start=10):
     if start <= 0:
         print("time is up")
-        sys.exit()
+        return
     else:
         print(start)
         countdown_recursive(start - 1)
