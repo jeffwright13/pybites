@@ -1,4 +1,3 @@
-import pytest
 from datetime import datetime
 from itertools import islice
 from bite016 import gen_special_pybites_dates

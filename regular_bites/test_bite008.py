@@ -1,5 +1,4 @@
 import bite008
-import pytest
 
 """
 @pytest.mark.parametrize(

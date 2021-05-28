@@ -11,10 +11,10 @@ def test_basic_constructor():
 
 def test_constructor_wrong_types():
     def give_int_instead_of_string():
-        P = Promo(5, datetime.now())
+        Promo(5, datetime.now())
 
     def give_str_instead_of_datetime():
-        P = Promo("some_string", "bad_datetime")
+        Promo("some_string", "bad_datetime")
 
     with pytest.raises(AssertionError):
         give_int_instead_of_string()
