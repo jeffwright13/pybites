@@ -3,4 +3,6 @@
 __pycache__/
 results/
 .python-version
+.venv
 *.xml
+*.code-workspace
